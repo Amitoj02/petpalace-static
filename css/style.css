@@ -1,6 +1,9 @@
+
+
 /*Item card*/
 .item-card {
-    margin: 0.5rem ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 0;
     box-shadow: 0 0.1rem 1rem #e3e3e3;
     transition: transform .2s;
@@ -52,4 +55,12 @@
 .owl-next {
     right: 0;
     margin-right: -5%;
+}
+
+#search_box {
+    border: 1.5px darkgrey solid;
+    border-radius: 25px;
+    padding: 0.7rem 0rem 0.7rem 3rem;
+    background: url("../assets/images/search_icon.png") no-repeat 0.8rem;
+    background-size: 20px;
 }
