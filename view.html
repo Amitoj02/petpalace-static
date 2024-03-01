@@ -37,13 +37,165 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">FAQs</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <button class="btn btn-primary px-4 py-2">Login</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+
+    <!-- All Modals Here -->
+    <!--Login Modal-->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="pt-3 pe-3 text-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img src="assets/images/logo.png" width="75" height="75">
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-12 col-md-10 text-start">
+                            <h3>Please Sign In</h3>
+                            <p>New here? <a href="#" data-bs-toggle="modal" data-bs-target="#createAccountModal">Create New Account.</a></p>
+                            <div class="form-floating mt-4">
+                                <input type="email" class="form-control rounded-0 rounded-top" id="txt_login_email" placeholder="name@example.com">
+                                <label for="txt_login_email">Email address</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control rounded-0 rounded-bottom" id="txt_login_password" placeholder="Password">
+                                <label for="txt_login_password">Password</label>
+                            </div>
+                            <div class="form-check text-start my-3">
+                                <input class="form-check-input" type="checkbox" value="remember-me" id="txt_login_remember">
+                                <label class="form-check-label" for="txt_login_remember">
+                                    Remember me
+                                </label>
+                            </div>
+                            <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+                            <div class="text-center mt-3 mb-4">
+                                <a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target="#passwordModal">Forgot Password?</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sign Up Modal-->
+    <div class="modal fade" id="createAccountModal" tabindex="-1" aria-labelledby="createAccountModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="pt-2 ">
+                    <i class="bi bi-arrow-left-short fs-1 p-2" data-bs-toggle="modal" data-bs-target="#loginModal"></i>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img src="assets/images/logo.png" width="75" height="75">
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-12 col-md-10 text-center text-dark-emphasis">
+                            <p class="mb-0">Please fill all the details to</p>
+                            <h2>Create Account</h2>
+                            <div class="form-floating mb-3 mt-4">
+                                <input type="email" class="form-control" id="txt_create_name" placeholder="name@example.com">
+                                <label for="txt_create_name">Full Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="txt_create_email" placeholder="name@example.com">
+                                <label for="txt_create_email">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="txt_create_password" placeholder="Password">
+                                <label for="txt_create_password">Password</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="txt_create_confirm_password" placeholder="Password">
+                                <label for="txt_create_confirm_password">Confirm Password</label>
+                            </div>
+                            <div class="text-start">
+                                <p>By continuing, you agree to PetPalace's <a href="#">Terms of Use</a> & <a href="#">Privacy policy</a></p>
+                            </div>
+                            <button class="btn btn-primary w-100 py-2 mb-4" type="submit">Sign in</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Reset Password-->
+    <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="pt-3 pe-3 text-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 text-start">
+                            <h3>Reset Password</h3>
+                            <small>Forgot your password? No worries, enter your account email to send password reset link through the email.</small>
+                            <div class="form-floating mt-4">
+                                <input type="email" class="form-control" id="txt_reset_email" placeholder="name@example.com">
+                                <label for="txt_login_email">Email address</label>
+                            </div>
+                            <button class="btn btn-primary w-100 py-2 my-4" type="submit">Send Link</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Inquiry Modal -->
+    <div class="modal fade" id="inquiryModal" tabindex="-1" aria-labelledby="inquiryModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="pt-3 pe-3 text-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 text-start">
+                            <h3>Submit Your Inquiry</h3>
+                            <small>Let the pet owner/animal shelter know about your interest through inquiry.</small>
+
+                            <div class="form-floating mt-4">
+                                <input type="email" class="form-control" id="txt_inquiry_name" placeholder="name@example.com">
+                                <label for="txt_login_email">Your name</label>
+                            </div>
+
+                            <div class="form-floating mt-2">
+                                <input type="email" class="form-control" id="txt_inquiry_phone" placeholder="name@example.com">
+                                <label for="txt_inquiry_phone">Phone number</label>
+                            </div>
+
+                            <div class="form-floating mt-2">
+                                <input type="email" class="form-control" id="txt_inquiry_email" placeholder="name@example.com">
+                                <label for="txt_inquiry_email">Address (Optional)</label>
+                            </div>
+
+                            <div class="form-floating mt-2">
+                                <textarea type="email" class="form-control" id="txt_inquiry_address" placeholder="name@example.com" style="height: 100px"></textarea>
+                                <label for="txt_inquiry_address">Your Inquiry</label>
+                            </div>
+                            <button class="btn btn-primary w-100 py-2 my-4" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </header>
 
 <main class="pt-5 mt-5">
@@ -89,7 +241,7 @@
                 </div>
 
                 <div class="d-grid col-12 col-md-6 mx-auto my-5">
-                    <button class="btn btn-primary py-3" type="button"><i class="bi bi-telephone-forward-fill"></i> &nbsp;&nbsp;Start Your Inquery</button>
+                    <button class="btn btn-primary py-3" data-bs-toggle="modal" data-bs-target="#inquiryModal" type="button"><i class="bi bi-telephone-forward-fill"></i> &nbsp;&nbsp;Start Your Inquiry</button>
                 </div>
             </div>
         </div>
