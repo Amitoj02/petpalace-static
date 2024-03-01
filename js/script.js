@@ -1,3 +1,4 @@
+// For index.html carousel
 $('.owl-carousel').owlCarousel({
     loop:false,
     margin:20,
@@ -19,3 +20,14 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+// For view.html main slider
+jQuery( document ).ready(function( $ ) {
+    $( '#my-slider' ).sliderPro({
+        width: 300,
+        height: 300,
+        visibleSize: '100%',
+        forceSize: 'fullWidth',
+        autoSlideSize: true
+    });
+});
