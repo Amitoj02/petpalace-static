@@ -196,66 +196,77 @@
 
     <!--Pet Modal -->
     <div class="modal fade" id="petModal" tabindex="-1" aria-labelledby="petModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="pt-3 pe-3 text-end">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row justify-content-center">
-                        <div class="col-12 col-md-10 text-start">
+
+                        <div class="col-12 col-md-11 text-start">
                             <h2>Upload</h2>
                             <small>Fill all the pet informations</small>
 
-                            <div class="form-floating mt-4">
-                                <input type="email" class="form-control" id="txt_inquiry_name" placeholder="name@example.com">
-                                <label for="txt_login_email">Pet name</label>
+                            <div class="row row-cols-1 row-cols-md-2 mt-2">
+                                <div class="col form-floating mt-3">
+                                    <input type="email" class="form-control" id="txt_inquiry_name" placeholder="name@example.com">
+                                    <label for="txt_login_email" class="ms-2">Pet name</label>
+                                </div>
+
+                                <div class="col form-floating mt-3">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                        <option selected>Select Type</option>
+                                        <option value="Birds">Birds</option>
+                                        <option value="Cats">Cats</option>
+                                        <option value="Dogs">Dogs</option>
+                                        <option value="Exotic Pets">Exotic Pets</option>
+                                        <option value="Guinea Pigs">Guinea Pigs</option>
+                                        <option value="Horses">Horses</option>
+                                        <option value="Others">Others</option>
+                                        <option value="Rabbits">Rabbits</option>
+                                        <option value="Reptiles">Reptiles</option>
+                                        <option value="Small & Furry Pets">Small & Furry Pets</option>
+                                    </select>
+                                    <label for="floatingSelect" class="ms-2">Type</label>
+                                </div>
+
+                                <!--TODO: For chips: https://codepen.io/iMaeGoo/pen/qwOjpB-->
+
+                                <div class="col form-floating mt-3">
+                                    <input type="email" class="form-control" id="txt_inquiry_email" placeholder="name@example.com">
+                                    <label for="txt_inquiry_email" class="ms-2">Color</label>
+                                </div>
+
+                                <div class="col form-floating mt-3">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                        <option selected>Select Size</option>
+                                        <option value="Birds">Small</option>
+                                        <option value="Cats">Medium</option>
+                                        <option value="Dogs">Large</option>
+                                    </select>
+                                    <label for="floatingSelect" class="ms-2">Type</label>
+                                </div>
                             </div>
 
-                            <div class="form-floating mt-2">
-                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                    <option selected>Select Type</option>
-                                    <option value="Birds">Birds</option>
-                                    <option value="Cats">Cats</option>
-                                    <option value="Dogs">Dogs</option>
-                                    <option value="Exotic Pets">Exotic Pets</option>
-                                    <option value="Guinea Pigs">Guinea Pigs</option>
-                                    <option value="Horses">Horses</option>
-                                    <option value="Others">Others</option>
-                                    <option value="Rabbits">Rabbits</option>
-                                    <option value="Reptiles">Reptiles</option>
-                                    <option value="Small & Furry Pets">Small & Furry Pets</option>
-                                </select>
-                                <label for="floatingSelect">Type</label>
+                            <div class="col mt-3">
+                                <label for="formFileMultiple" class="form-label">Attach multiple images</label>
+                                <input class="form-control" type="file" id="formFileMultiple" multiple>
                             </div>
 
-                            <!--TODO: For chips: https://codepen.io/iMaeGoo/pen/qwOjpB-->
-
-                            <div class="form-floating mt-2">
+                            <div class="form-floating mt-3">
                                 <input type="email" class="form-control" id="txt_inquiry_email" placeholder="name@example.com">
-                                <label for="txt_inquiry_email">Color</label>
+                                <label for="txt_inquiry_email">Address</label>
                             </div>
 
-                            <div class="form-floating mt-2">
-                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                    <option selected>Select Size</option>
-                                    <option value="Birds">Small</option>
-                                    <option value="Cats">Medium</option>
-                                    <option value="Dogs">Large</option>
-                                </select>
-                                <label for="floatingSelect">Type</label>
-                            </div>
-
-                            <div class="form-floating mt-2">
-                                <input type="email" class="form-control" id="txt_inquiry_email" placeholder="name@example.com">
-                                <label for="txt_inquiry_email">Address (to pick the pet)</label>
-                            </div>
-
-                            <div class="form-floating mt-2">
-                                <textarea type="email" class="form-control" id="txt_inquiry_address" placeholder="name@example.com" style="height: 100px"></textarea>
+                            <div class="form-floating mt-3">
+                                <textarea type="email" class="form-control" id="txt_inquiry_address" placeholder="name@example.com" style="height: 200px"></textarea>
                                 <label for="txt_inquiry_address">Description</label>
                             </div>
+
+
                             <button class="btn btn-primary w-100 py-2 my-4" type="submit">Submit</button>
+
                         </div>
                     </div>
                 </div>
